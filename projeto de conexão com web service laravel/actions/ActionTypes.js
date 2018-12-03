@@ -1,0 +1,1 @@
+export const DEFINE_SESSION = 'DEFINE_SESSION'
