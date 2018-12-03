@@ -1,0 +1,15 @@
+{
+  "name": "edacrawler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arthur Barata",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^5.3.14",
+    "puppeteer": "^1.10.0"
+  }
+}
