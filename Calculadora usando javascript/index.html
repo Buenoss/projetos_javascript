@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Calculadora</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body onkeypress="calc.getEntryFromKeyboard(event)">
+    <div class="instrucoes">
+        <div class="instruction_body">
+                c  > rezeta todas as entradas menos ans
+                <br>
+                ac > rezeta tudo até ans
+                <br>
+                d  > delete a última coisa que você digitou
+                <br>
+                =  > gatilho para calcular a equação
+                <br>
+                e  > operador para calcular a exponenciação exmplo: 10e2 = 100
+                <br>
+                %  > operador para calcular porcentagem exmplo: 100%10 = 10
+                <br>
+                +  > operador para calcular soma exmplo: 10+10 = 20
+                <br>
+                -  > operador para calcular subtração exmplo: 10-5 = 5
+                <br>
+                /  > operador para calcular divisão exmplo: 100/5 = 20
+                <br>
+                x  > operador para calcular a multiplicação exmplo: 2x5 = 10
+                <br>
+                s  > operador para calcular a raiz do número que vem antes exmplo: 25s = 5
+                <br>
+                ------------------------------------------------
+                <br>
+                Também é possível fazer:
+                <br>
+                    2+2+2+2+2-3*2 > porém, as operações são
+                    calculadas da esquerda para a direita, então esse texto é igual a (2+2+2+2+2-3)*2
+                <br>
+                    2+2= e em seguida digitar +2= > então a calculadora pega o valor anterior 
+                    e guarda para usar na nova operação
+                <br>
+                <br>
+                    <strong>Esta calculadora aceita entradas do teclado, 
+                        desde que sejam números ou uma das operações acima citadas</strong>    
+        </div>
+    </div>
+    <div class="calculadora_body">
+        <div id="calculadora_ecran">
+            <div id="ecran_text">0</div>
+        </div>
+        <div class="calculadora_buttons">
+            <div class="button_group">
+                <!-- adicionar -->
+                    <button class="button" onclick="calc.guardarEntrada('+')" >+</button>
+                <!-- subtrair -->
+                    <button class="button" onclick="calc.guardarEntrada('-')" >-</button>
+                <!-- multiplicar -->
+                    <button class="button" onclick="calc.guardarEntrada('x')" >x</button>
+                <!-- dividir -->
+                    <button class="button" onclick="calc.guardarEntrada('/')" >/</button>
+            </div>
+            
+            <div class="button_group">
+                <!-- calcular a porcentagem -->
+                    <button class="button" onclick="calc.guardarEntrada('%')" >%</button>
+                <!-- calcular a raiz quadrada -->
+                    <button class="button" onclick="calc.guardarEntrada('s')" >sqrt</button>
+                <!-- exponenciação -->
+                    <button class="button" onclick="calc.guardarEntrada('e')" >nª</button>
+                <!-- limpar visor -->
+                    <button class="button" onclick="calc.guardarEntrada('c')" >c</button>
+            </div>
+            
+            <!-- teclas -->
+            <div class="teclas_group">
+                <button class="button" onclick="calc.guardarEntrada('1')" >1</button>
+                <button class="button" onclick="calc.guardarEntrada('2')" >2</button>
+                <button class="button" onclick="calc.guardarEntrada('3')" >3</button>
+                <button class="button" onclick="calc.guardarEntrada('ac')" >ac</button>
+            </div>
+            <div class="teclas_group">
+                <button class="button" onclick="calc.guardarEntrada('4')" >4</button>
+                <button class="button" onclick="calc.guardarEntrada('5')" >5</button>
+                <button class="button" onclick="calc.guardarEntrada('6')" >6</button>
+                <button class="button" onclick="calc.guardarEntrada('.')" >.</button>
+            </div>
+            <div class="teclas_group">
+                <button class="button" onclick="calc.guardarEntrada('7')" >7</button>
+                <button class="button" onclick="calc.guardarEntrada('8')" >8</button>
+                <button class="button" onclick="calc.guardarEntrada('9')" >9</button>
+            </div>
+            <div class="nine">
+                <button class="button" onclick="calc.guardarEntrada('0')" >0</button>
+            </div>
+            <button class="button-equal" onclick="calc.guardarEntrada('=')" >=</button>
+        </div>
+    </div>
+</body>
+<script>
+    var calc = new Calc();
+</script>
+</html>

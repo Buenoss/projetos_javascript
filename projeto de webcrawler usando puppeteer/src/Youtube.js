@@ -8,7 +8,7 @@ module.exports=(async ()=>{
     const page = await browser.newPage();
     
     await page.goto('https://www.youtube.com/');
-    await page.type('#search', 'eda coutinho');
+    await page.type('#search', 'coloque aqui o que deseja buscar');
 
     const btnSearch = '#search-icon-legacy';
     await page.waitForSelector(btnSearch);
@@ -30,7 +30,7 @@ module.exports=(async ()=>{
     }, ListSelector);
 
     lister.forEach(obj => {
-        if(obj.title.toLowerCase().includes('eda ')){
+        if(obj.title.toLowerCase().includes('coloque aqui algum filtro')){
             youtube.create({title: obj.title, link: obj.link})
         }
     });

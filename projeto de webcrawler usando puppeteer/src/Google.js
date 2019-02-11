@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer');
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://root123:root123@ds161901.mlab.com:61901/edacrawler');
+mongoose.connect('conecte aqui com o se banco mongodb');
 const google = mongoose.model('Google', { title: String , link: String});
 
 module.exports = (async ()=>{
