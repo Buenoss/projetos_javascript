@@ -1,0 +1,15 @@
+{
+  "short_name": "WebApp",
+  "name": "WebApp",
+  "icons": [
+    {
+      "src": "images/android-icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#ed2241",
+  "background_color": "#ffffff"
+}
