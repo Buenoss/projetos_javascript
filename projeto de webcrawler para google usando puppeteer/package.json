@@ -1,15 +1,17 @@
 {
-  "name": "edacrawler",
+  "name": "novoedacrawler",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Arthur Barata",
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "mongoose": "^5.3.14",
-    "puppeteer": "^1.10.0"
+    "axios": "^0.18.0",
+    "mongoose": "^5.4.14",
+    "mssql": "^4.3.2",
+    "puppeteer": "^1.12.2"
   }
 }
