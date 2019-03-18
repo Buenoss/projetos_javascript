@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer')
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://root123:root123@ds161901.mlab.com:61901/edacrawler', { useNewUrlParser: true })
+mongoose.connect('url de conexão', { useNewUrlParser: true })
 const googleNovos = mongoose.model('googlenovos', { title: String , link: String, typeAcc: String })
 const userAgent     = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.109 Safari/537.36';
 
