@@ -241,7 +241,7 @@ const axios     = require('axios'    );
 
 
         axios
-        .post('http://homol.iesb.br/api/v1/auth/token', {
+        .post('urldestino', {
             "username" : "arthur.barata",
 	        "password" : "123456"
         })
@@ -250,7 +250,7 @@ const axios     = require('axios'    );
             resultados.forEach((resultado)=>{
                 // Aqui se armazena os arquivos;
                 axios
-                .post('http://homol.iesb.br/api/v1/crawler/videos',{
+                .post('urldestino',{
                         token : res.data.token,
                         title : resultado.title,
                         url   : resultado.href,
